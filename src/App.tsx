@@ -1,5 +1,5 @@
 import { BrowserRouter } from 'react-router-dom';
-import Routes from './router/Routes';
+import Routes from './routes/Routes';
 import './styles/tailwind.css';
 
 function App() {
