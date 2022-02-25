@@ -67,12 +67,12 @@ function Location() {
 
   return (
     <div>
-      <form onSubmit={onSubmit} className="flex flex-col space-y-8">
+      <form onSubmit={onSubmit} className="flex flex-col space-y-8 prose-p:text-red-500 prose-p:text-xs prose-p:mt-1">
         <div>
           <input
             placeholder="Address"
             id="autocomplete"
-            className="input-field"
+            className="p-2 border-2 border-gray-200 rounded-md"
             ref={ref}
             type="text"
           />
@@ -80,9 +80,17 @@ function Location() {
         </div>
 
         <div>
-          <input placeholder="Name" {...register('name')} />
-          {errors.name && <p>{errors.name.message}</p>}
           <input
+            className="p-2 border-2 border-gray-200 rounded-md"
+            placeholder="Name"
+            {...register('name')}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
+        </div>
+
+        <div>
+          <input
+            className="p-2 border-2 border-gray-200 rounded-md"
             value="street_address"
             placeholder="Street Address"
             {...register('street_address')}
@@ -91,21 +99,36 @@ function Location() {
         </div>
 
         <div>
-          <input value="city" placeholder="City" {...register('city')} />
+          <input
+            className="p-2 border-2 border-gray-200 rounded-md"
+            value="city"
+            placeholder="City"
+            {...register('city')}
+          />
           {errors.city && <p>{errors.city.message}</p>}
         </div>
 
         <div>
-          <input value="state" placeholder="State" {...register('state')} />
+          <input
+            className="p-2 border-2 border-gray-200 rounded-md"
+            value="state"
+            placeholder="State"
+            {...register('state')}
+          />
           {errors.state && <p>{errors.state.message}</p>}
         </div>
 
         <div>
-          <input value="zip_code" placeholder="Zipcode" {...register('zip_code')} />
+          <input
+            className="p-2 border-2 border-gray-200 rounded-md"
+            value="zip_code"
+            placeholder="Zipcode"
+            {...register('zip_code')}
+          />
           {errors.zip_code && <p>{errors.zip_code.message}</p>}
         </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" className="bg-primary text-white rounded p-2">Submit</button>
       </form>
     </div>
   );
