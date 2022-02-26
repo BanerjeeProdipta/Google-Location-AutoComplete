@@ -91,7 +91,6 @@ function Location() {
         <div>
           <input
             className="p-2 border-2 border-gray-200 rounded-md"
-            value="street_address"
             placeholder="Street Address"
             {...register('street_address')}
           />
@@ -101,7 +100,6 @@ function Location() {
         <div>
           <input
             className="p-2 border-2 border-gray-200 rounded-md"
-            value="city"
             placeholder="City"
             {...register('city')}
           />
@@ -111,7 +109,6 @@ function Location() {
         <div>
           <input
             className="p-2 border-2 border-gray-200 rounded-md"
-            value="state"
             placeholder="State"
             {...register('state')}
           />
@@ -121,7 +118,6 @@ function Location() {
         <div>
           <input
             className="p-2 border-2 border-gray-200 rounded-md"
-            value="zip_code"
             placeholder="Zipcode"
             {...register('zip_code')}
           />
